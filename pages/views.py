@@ -1,4 +1,8 @@
 from django.http import HttpResponse # HttpResponse allows us to send a http message to the borwser, such as html or text.
+from django.views.generic import TemplateView #the template view already has all the logci we need. Our task is only to specify the template's name
 
-def homePageView(request): #we're creating a view function that will take the request object which is a http request sent by the browser, like typing in a URL. 
-    return HttpResponse('Hello, World!') #using the imported module to respond with a http response, we use the httpResponse function, where it's argument is the value that the http response contains. in this case it's simple hello world.
+class HomePageView(TemplateView):
+    template_name = 'home.html'
+
+class AboutPageView(TemplateView):
+    template_name = 'about.html'

@@ -18,5 +18,5 @@ from django.contrib import admin
 from django.urls import path, include #pages is an app defined previously in our project. In pages/urls.py we define the urls specific for the app
 
 urlpatterns = [
-    path('', include('pages.urls')), #here just like with the second urls.py file we specify what url should get what view function. funkcja include sprawia żeby django poszło sprawdzić jaka funkjca view jest w pliku urls, dla tej specyficznej aplikacji. 
+    path('', include('pages.urls')), # new, #here just like with the second urls.py file we specify what url should get what view function. funkcja include sprawia żeby django poszło sprawdzić jaka funkjca view jest w pliku urls, dla tej specyficznej aplikacji. 
 ]
